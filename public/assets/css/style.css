@@ -2,8 +2,20 @@ html {
 	font-size: 12px;
 }
 
+.navbar{
+margin-bottom: auto;
+}
+
+.container-fluid{
+background:white;
+}
+
+.spoo{
+  float: right;
+}
+
 li {
-    margin-bottom: 1%;
+    margin-bottom: none;
 }
 
 p {
@@ -12,18 +24,33 @@ p {
 	margin-top: 1%;
 }
 
+@font-face {
+    font-family: BluelineParadise;
+    src: url('assets/css/BluelineParadise.ttf');
+}
+
+.title{
+text-align: center;
+color: white;
+font-family: 'BluelineParadise.ttf';
+font-size: 55px;
+}
+
 #bodyinput {
     width: 50%;
 }
 
 .jumbotron {
-	overflow: hidden;
-    background-size: 50%;
+	/* overflow: hidden; */
+    background-size: 100%;
     background-position: center;
-    background-image: url('../images/spoofee.jpg');
+    background-image: url('../images/shoping.jpg');
     background-repeat: no-repeat;
-    height: 100px;
-    width: 100%;
+      height: 600px;
+      max-width: 100%;
+    background-size: cover;
+
+
 }
 
 .panel-heading.row {
@@ -38,6 +65,8 @@ p {
 #savenote {
     display: block;
 }
+
+
 
 /*
   These rules take effect when the browser's width

@@ -19,7 +19,7 @@ router.get("/", function(req, res) {
 });
 
 // This will get the articles scraped and saved in db and show them in list.
-router.get("/saved", function(req, res) {
+router.get("/savedarticles", function(req, res) {
 
   // Grab every doc in the Articles array
   Article.find({}, function(error, doc) {
@@ -33,7 +33,7 @@ router.get("/saved", function(req, res) {
         articles: doc
       };
 
-      res.render("saved", hbsArticleObject);
+      res.render("savedarticles", hbsArticleObject);
     }
   });
 });
@@ -102,7 +102,7 @@ router.post("/save", function(req, res) {
     }
   });
 
-  res.redirect("/saved");
+  res.redirect("/savedarticles");
 
 });
 
@@ -118,7 +118,7 @@ router.get("/delete/:id", function(req, res) {
     } else {
       console.log("Able to delete, Yay");
     }
-    res.redirect("/saved");
+    res.redirect("/savedarticles");
   });
 });
 
